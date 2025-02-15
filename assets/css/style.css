@@ -33227,7 +33227,7 @@ img.svg-inject {
 [class*=" uil-"],
 [class^=icn-],
 [class*=" icn-"] {
-  speak: none;
+  /*speak: none;*/
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
