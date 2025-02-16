@@ -11,6 +11,31 @@
 		<link rel="stylesheet" href="assets/css/plugins.css">
 		<link rel="stylesheet" href="assets/css/style.css?1">
 		<link rel="stylesheet" href="assets/css/colors/sky.css">
+		<style>
+    /* Стили для плавающего окна */
+    .floating-contact-box {
+        position: fixed;
+        right: 20px;
+        bottom: 50px;
+        width: 250px;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        z-index: 1000;
+    }
+    .floating-contact-box a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        margin: 5px 0;
+    }
+    .floating-contact-box a:hover {
+        text-decoration: underline;
+    }
+</style>
 		<meta name="selfwork.ru" content="f5OWh5JfG1AITvxXXpozbwDg6bhKJdrdetsmpLx5dSGAFAi1Vf" />
 	</head>
 	<body data-site-id="">
@@ -522,7 +547,21 @@
 </div>
 <script src="assets/js/plugins.js"></script>
 <script src="assets/js/theme.js"></script>
+<script>
+    // Плавающее окно остается на месте при прокрутке
+    window.addEventListener('scroll', function() {
+        let box = document.querySelector('.floating-contact-box');
+        box.style.top = window.scrollY + window.innerHeight - 150 + 'px';
+    });
+</script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<div class="floating-contact-box">
+    <h4>Свяжитесь с нами</h4>
+    <p><a href="tel:+79092502221">+7 909 250 2221</a></p>
+    <p><a href="mailto:email@example.ex">email@example.ex</a></p>
+    <p><a href="https://t.me/example">Telegram</a></p>
+    <p><a href="https://vk.com/example">VK</a></p>
+</div>
 </body>
 </html>
 
