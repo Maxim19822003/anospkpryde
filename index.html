@@ -14,18 +14,20 @@
 		<style>
     /* Стили для плавающего окна */
     .floating-contact-box {
-        position: fixed;
-        right: 20px;
-        bottom: 50px;
-        width: 250px;
-        background: rgba(0, 0, 0, 0.8);
-        color: white;
-        padding: 15px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        text-align: center;
-        z-index: 1000;
-    }
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    width: 250px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 1000;
+    display: flex; /* Фиксируем содержимое */
+    flex-direction: column; /* Выравниваем ссылки в колонку */
+}
     .floating-contact-box h4 {
     color: white; /* Делаем текст белым */
     margin-bottom: 10px;
@@ -552,10 +554,11 @@
 <script src="assets/js/plugins.js"></script>
 <script src="assets/js/theme.js"></script>
 <script>
-    // Плавающее окно остается на месте при прокрутке
     window.addEventListener('scroll', function() {
         let box = document.querySelector('.floating-contact-box');
-        box.style.top = window.scrollY + window.innerHeight - 150 + 'px';
+        box.style.position = 'fixed';
+        box.style.right = '20px';
+        box.style.bottom = '50px';
     });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
