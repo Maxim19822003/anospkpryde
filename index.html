@@ -15,35 +15,53 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
                 <link rel="manifest" href="/site.webmanifest">
-		<style>
+<style>
     /* Стили для плавающего окна */
     .floating-contact-box {
-    position: fixed;
-    right: 20px;
-    bottom: 50px;
-    width: 250px;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    z-index: 1000;
-    display: flex; /* Фиксируем содержимое */
-    flex-direction: column; /* Выравниваем ссылки в колонку */
-}
-    .floating-contact-box h4 {
-    color: white; /* Делаем текст белым */
-    margin-bottom: 10px;
-    }
-    .floating-contact-box a {
+        position: fixed;
+        right: 20px;
+        bottom: 50px;
+        width: 250px;
+        background: rgba(0, 0, 0, 0.8);
         color: white;
-        text-decoration: none;
-        display: block;
-        margin: 5px 0;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        z-index: 1000;
+        transition: all 0.3s ease-in-out;
     }
-    .floating-contact-box a:hover {
-        text-decoration: underline;
+
+    /* Заголовок, который остаётся видимым при сворачивании */
+    .contact-header {
+        background: #222;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 10px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    /* Контент контактов - изначально отображается */
+    .contact-content {
+        display: block;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    /* Состояние свернутого окна */
+    .floating-contact-box.minimized {
+        width: 150px;
+        padding: 5px;
+        height: auto;
+    }
+
+    .floating-contact-box.minimized .contact-content {
+        display: none;
+    }
+
+    .floating-contact-box.minimized .contact-header {
+        background: #444;
     }
 </style>
 	</head>
@@ -564,14 +582,37 @@
         box.style.bottom = '50px';
     });
 </script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<!-- Плавающее окно с контактами -->
 <div class="floating-contact-box">
-    <h4>Свяжитесь с нами</h4>
-    <p><a href="tel:+79092502221">+7 909 250 2221</a></p>
-    <p><a href="mailto:email@example.ex">email@example.ex</a></p>
-    <p><a href="https://t.me/example">Telegram</a></p>
-    <p><a href="https://vk.com/example">VK</a></p>
-</div>
+    <div class="contact-header" onclick="toggleContactBox()">
+        📞 Контакты
+    </div>
+    <div class="contact-content">
+        <p><a href="tel:+79092502221">+7 909 250 2221</a></p>
+        <p><a href="mailto:email@example.ex">email@example.ex</a></p>
+        <p><a href="https://t.me/ano_spk_prayd">Telegram</a></p>
+        <p><a href="https://vk.com/example">VK</a></p>
+    </div>
+</div>		
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    let isMinimized = false;
+
+    function toggleContactBox() {
+        const box = document.querySelector(".floating-contact-box");
+        isMinimized = !isMinimized;
+        box.classList.toggle("minimized", isMinimized);
+    }
+
+    // Сворачивание окна при прокрутке вниз
+    window.addEventListener("scroll", function () {
+        const box = document.querySelector(".floating-contact-box");
+        if (window.scrollY > 100 && !isMinimized) {
+            box.classList.add("minimized");
+            isMinimized = true;
+        }
+    });
+</script>
 </body>
 </html>
 
