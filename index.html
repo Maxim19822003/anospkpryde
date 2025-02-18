@@ -50,10 +50,17 @@
     }
 
     /* Состояние свернутого окна */
-    .floating-contact-box.minimized {
-        width: 150px;
-        padding: 5px;
-        height: auto;
+.floating-contact-box.minimized {
+    width: 150px;
+    padding: 5px;
+    height: auto;
+    opacity: 0.6; /* Уменьшаем непрозрачность */
+    background: rgba(0, 0, 0, 0.6); /* Делаем фон чуть прозрачнее */
+}
+
+.floating-contact-box.minimized .contact-header {
+    background: rgba(34, 34, 34, 0.7); /* Заголовок тоже делаем прозрачным */
+)
     }
 
     .floating-contact-box.minimized .contact-content {
