@@ -38889,26 +38889,3 @@ footer.bg-dark.angled.upper-start:before {
     position: relative;
   }
 }
-#gallery {
-    text-align: center;
-    padding: 20px;
-}
-
-#gallery .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-#gallery img {
-    width: 100%;
-    max-width: 300px; /* Максимальная ширина фото */
-    height: auto;
-    margin: 10px;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-#gallery img:hover {
-    transform: scale(1.05);
-}
