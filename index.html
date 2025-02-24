@@ -16,18 +16,6 @@
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
                 <link rel="manifest" href="/site.webmanifest">
 <style>
-#gallery img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-#gallery img:hover {
-    transform: scale(1.05);
-}
-
     /* Стили для плавающего окна */
     .floating-contact-box {
         position: fixed;
@@ -82,6 +70,7 @@
     .floating-contact-box.minimized .contact-header {
         background: #444;
     }
+	
 </style>
 	</head>
 	<body data-site-id="">
@@ -334,6 +323,31 @@
     </div>
 </section>
 
+<style>
+#gallery {
+    text-align: center;
+    padding: 20px;
+}
+
+#gallery .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#gallery img {
+    width: 100%;
+    max-width: 300px; /* Максимальная ширина фото */
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#gallery img:hover {
+    transform: scale(1.05);
+}
+</style>
   
   
 
