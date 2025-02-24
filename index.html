@@ -8,13 +8,9 @@
 		<meta name="author" content="">
 		<title></title>
 		<link rel="shortcut icon" href="/favicon.ico">
-		<link rel="stylesheet" href="assets/css/plugins.css">
-		<link rel="stylesheet" href="assets/css/style.css">
-		<link rel="stylesheet" href="assets/css/style.css?1">
-		<link rel="stylesheet" href="assets/css/colors/sky.css">
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-                <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    		<link rel="stylesheet" href="assets/css/plugins.css">
+    		<link rel="stylesheet" href="assets/css/style.css">
+    		<link rel="stylesheet" href="assets/css/colors/sky.css">
                 
 <style>
     /* Стили для плавающего окна */
@@ -71,7 +67,29 @@
     .floating-contact-box.minimized .contact-header {
         background: #444;
     }
-	
+#gallery {
+            text-align: center;
+            padding: 20px;
+        }
+
+        #gallery .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #gallery img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #gallery img:hover {
+            transform: scale(1.05);
+        }	
 </style>
 	</head>
 	<body data-site-id="">
@@ -298,31 +316,19 @@
   <!-- /section -->
 
     
-   <section id="gallery" class="wrapper bg-light">
-    <div class="container py-14 py-md-16">
-        <h2 class="text-center mb-5">Фотогалерея</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <img src="/gallery1.jpg" class="img-fluid rounded" alt="Галерея 1">
-            </div>
-            <div class="col-md-4">
-                <img src="/gallery2.jpg" class="img-fluid rounded" alt="Галерея 2">
-            </div>
-            <div class="col-md-4">
-                <img src="/gallery3.jpg" class="img-fluid rounded" alt="Галерея 3">
-            </div>
-            <div class="col-md-4">
-                <img src="/gallery4.jpg" class="img-fluid rounded" alt="Галерея 4">
-            </div>
-            <div class="col-md-4">
-                <img src="/gallery5.jpg" class="img-fluid rounded" alt="Галерея 5">
-            </div>
-            <div class="col-md-4">
-                <img src="/gallery6.jpg" class="img-fluid rounded" alt="Галерея 6">
+  <section id="gallery" class="wrapper bg-light">
+        <div class="container py-14 py-md-16">
+            <h2 class="text-center mb-5">Фотогалерея</h2>
+            <div class="row">
+                <div class="col-md-4"><img src="/gallery1.jpg" alt="Галерея 1"></div>
+                <div class="col-md-4"><img src="/gallery2.jpg" alt="Галерея 2"></div>
+                <div class="col-md-4"><img src="/gallery3.jpg" alt="Галерея 3"></div>
+                <div class="col-md-4"><img src="/gallery4.jpg" alt="Галерея 4"></div>
+                <div class="col-md-4"><img src="/gallery5.jpg" alt="Галерея 5"></div>
+                <div class="col-md-4"><img src="/gallery6.jpg" alt="Галерея 6"></div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
   
