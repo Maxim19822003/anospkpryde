@@ -38949,9 +38949,9 @@ footer.bg-dark.angled.upper-start:before {
     color: #888;
 }
 header.wrapper.bg-sky {
-    background-image: url("./фон4.jpg"); /* Путь к картинке */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    background-image: url("фон4.jpg") !important; /* Путь к картинке */
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
 }
