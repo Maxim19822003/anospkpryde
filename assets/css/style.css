@@ -11285,14 +11285,7 @@ fieldset:disabled .btn {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-sky-rgb), var(--bs-bg-opacity));
 }
-.bg-sky {
-    background: none !important; /* Убираем цвет */
-    background-image: url('фон4.jpg') !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-attachment: fixed !important;
-    background-repeat: no-repeat !important;
-}
+
 .bg-purple {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-purple-rgb), var(--bs-bg-opacity)) !important;
