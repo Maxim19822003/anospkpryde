@@ -11285,7 +11285,14 @@ fieldset:disabled .btn {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-sky-rgb), var(--bs-bg-opacity));
 }
-
+.bg-sky {
+    background: none !important; /* Убираем цвет */
+    background-image: url('фон4.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
+}
 .bg-purple {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-purple-rgb), var(--bs-bg-opacity)) !important;
@@ -38950,10 +38957,4 @@ footer.bg-dark.angled.upper-start:before {
     font-size: 12px;
     color: #888;
 }
-header.wrapper.bg-sky {
-    background-image: url("фон4.jpg") !important; /* Путь к картинке */
-    background-size: cover !important;
-    background-position: center !important;
-    background-attachment: fixed !important;
-    background-repeat: no-repeat !important;
-}
+
