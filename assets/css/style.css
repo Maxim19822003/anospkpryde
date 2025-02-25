@@ -38948,3 +38948,10 @@ footer.bg-dark.angled.upper-start:before {
     font-size: 12px;
     color: #888;
 }
+header.wrapper.bg-sky {
+    background-image: url('фон4.jpg'); /* Путь к картинке */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
