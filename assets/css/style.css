@@ -11281,10 +11281,7 @@ fieldset:disabled .btn {
   background-color: rgba(var(--bs-blue-rgb), var(--bs-bg-opacity)) !important;
 }
 
-
-}
 .bg-sky {
-   
     background-image: url('фон4.jpg') !important;
     background-size: cover !important;
     background-position: center !important;
