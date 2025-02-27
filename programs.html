@@ -3,44 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Программы - АНО СПК ПРАЙД</title>
+    <title>Программы - СПК ПРАЙД</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
 
 <header class="wrapper bg-sky">
-    <nav>
-        <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="programs.html">Программы</a></li>
-            <li><a href="about.html">О нас</a></li>
-            <li><a href="gallery.html">Галерея</a></li>
-            <li><a href="contact.html">Контакты</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">СПК ПРАЙД</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="programs.html">Программы</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">О нас</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Галерея</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 </header>
 
-<main class="content">
+<main class="container mt-5">
+    <h1 class="text-center mb-4">Программы</h1>
+
     <!-- Раздел "Секция бокса" -->
-    <section id="boxing" class="program-section">
-        <h1>Секция бокса</h1>
-        <div class="trainer-info">
-            <img src="images/trainer.jpg" alt="Тренер бокса" class="trainer-photo">
-            <div class="trainer-bio">
-                <h2>Кравченко Андрей Александрович</h2>
+    <section class="card shadow p-4 mb-4">
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <img src="images/trainer.jpg" alt="Тренер бокса" class="img-fluid rounded">
+            </div>
+            <div class="col-md-8">
+                <h2>Секция бокса</h2>
                 <p>
-                    Кандидат в мастера спорта по боксу в СССР, тренер с 15-летним стажем. Участвовал в международных турнирах,
-                    подготовил множество победителей соревнований. Кравченко Андрей Александрович — наставник, вдохновляющий на победу
-                    и развитие силы духа.
+                    Наш клуб предлагает профессиональную секцию бокса для всех возрастов. Тренировки ведёт опытный наставник,
+                    мастер спорта Иван Петров, подготовивший множество чемпионов.
                 </p>
+                <div class="d-flex">
+                    <a href="gallery.html" class="btn btn-primary me-2">Галерея</a>
+                    <a href="contact.html" class="btn btn-success">Записаться</a>
+                </div>
             </div>
         </div>
-        <div class="buttons">
-            <a href="gallery.html" class="btn btn-primary">Галерея</a>
-            <a href="contact.html" class="btn btn-secondary">Записаться</a>
-        </div>
+    </section>
+
+    <!-- Добавим другие программы (пример) -->
+    <section class="card shadow p-4 mb-4">
+        <h2>Военно-патриотическая подготовка</h2>
+        <p>
+            Программа включает тренировки по военной тактике, физподготовку и изучение истории российских вооружённых сил.
+        </p>
+    </section>
+
+    <section class="card shadow p-4 mb-4">
+        <h2>Тактические игры</h2>
+        <p>
+            Участники проходят курс тактических игр, стрельбы из пневматики и ориентирования на местности.
+        </p>
     </section>
 </main>
 
+<!-- Подключение Bootstrap (скрипты) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
+
