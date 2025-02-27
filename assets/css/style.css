@@ -38948,4 +38948,15 @@ footer.bg-dark.angled.upper-start:before {
     font-size: 12px;
     color: #888;
 }
+.navbar {
+    background-color: #5eb9f0 !important; /* Голубая шапка */
+}
+
+.navbar .nav-link {
+    color: white !important; /* Белый цвет ссылок */
+}
+
+.navbar .nav-link:hover {
+    color: #f0f0f0 !important; /* Светло-серый при наведении */
+}
 
