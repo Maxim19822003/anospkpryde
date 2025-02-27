@@ -11,6 +11,26 @@
     <link rel="stylesheet" href="assets/css/colors/sky.css">
     
     <style>
+        /* Фиксированная шапка */
+        .wrapper.bg-sky {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .wrapper.bg-sky.scrolled {
+            background-color: rgba(255, 255, 255, 0.8) !important;
+        }
+        .wrapper.bg-sky .nav-link {
+            color: white !important;
+        }
+        .wrapper.bg-sky.scrolled .nav-link {
+            color: black !important;
+        }
+        body {
+            padding-top: 70px;
+        }
         /* Стили для плавающего окна */
         .floating-contact-box {
             position: fixed;
@@ -26,115 +46,28 @@
             z-index: 1000;
             transition: all 0.3s ease-in-out;
         }
-        .contact-header {
-            background: #222;
-            color: white;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 10px;
-            text-align: center;
-            font-weight: bold;
-        }
-        .contact-content {
-            display: block;
-        }
-        .floating-contact-box.minimized {
-            width: 150px;
-            padding: 5px;
-            height: auto;
-            opacity: 0.6;
-            background: rgba(0, 0, 0, 0.6);
-        }
-        .floating-contact-box.minimized .contact-content {
-            display: none;
-        }
-        .wrapper.bg-sky {
-    transition: background-color 0.3s ease-in-out;
-}
-
-.wrapper.bg-sky.scrolled {
-    background-color: rgba(255, 255, 255, 0.8) !important; /* Полупрозрачный белый */
-}
-
-.wrapper.bg-sky.scrolled .nav-link {
-    color: black !important; /* Чёрные ссылки в меню */
-}
-
     </style>
 </head>
 <body>
 
 <div class="content-wrapper">
     <header class="wrapper bg-sky">
-        <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
-    <div class="container flex-lg-row flex-nowrap align-items-center">
-        <!-- Логотип -->
-        <div class="navbar-brand w-100">
-            <a href="index.html">
-                <img class="logo-dark" style="max-width: 100px" src="цветспарашютом.jpg" alt="Логотип">
-            </a>
-        </div>
-
-        <!-- Кнопка гамбургер-меню -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Меню -->
-        <div class="collapse navbar-collapse offcanvas offcanvas-nav offcanvas-start" id="navbarNav">
-            <div class="offcanvas-header d-lg-none">
-                <a href="#"><img style="max-width: 120px" src="IMG-20250227-WA0108.jpg" alt=""/></a>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#about">О нас</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#news">Новости</a></li>
-                    <li class="nav-item"><a class="nav-link" href="programs.html">Программы</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Контакты</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</nav>
-
-            <div class="container flex-lg-row flex-nowrap align-items-center">
-                <!-- Логотип -->
-                <div class="navbar-brand w-100">
-                    <a href="#">
-              <img class="logo-dark"
-                   style="max-width: 100px"
-                  data-param-id="4"
-                  data-param-type="image"
-
-                                      src="цветспарашютом.jpg"
-                                    alt="" />
-
-              <img class="logo-light"
-                   style="max-width: 200px"
-                   data-param-id="4"
-                   data-param-type="image"
-
-                                          src="цветспарашютом.jpg"
-                                      alt=""/>
-            </a>
-                </div>
-
-                <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
-                    <div class="offcanvas-header d-lg-none">
-                        <a href="#"><img style="max-width: 120px" src="IMG-20250227-WA0108.jpg" alt=""/></a>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
-                        <ul class="navbar-nav">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-                            <li class="nav-item"><a class="nav-link" href="index.html#about">О нас</a></li>
-                            <li class="nav-item"><a class="nav-link" href="index.html#news">Новости</a></li>
-                            <li class="nav-item"><a class="nav-link" href="programs.html">Программы</a></li>
-                            <li class="nav-item"><a class="nav-link" href="index.html#contact">Контакты</a></li>
-                        </ul>
-                    </div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a href="index.html" class="navbar-brand">
+                    <img style="max-width: 100px" src="цветспарашютом.jpg" alt="Логотип">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#about">О нас</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#news">Новости</a></li>
+                        <li class="nav-item"><a class="nav-link" href="programs.html">Программы</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#contact">Контакты</a></li>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -142,8 +75,6 @@
 
     <main class="container mt-5">
         <h1 class="text-center mb-4">Программы</h1>
-
-        <!-- Раздел "Секция бокса" -->
         <section class="card shadow p-4 mb-4">
             <div class="row align-items-center">
                 <div class="col-md-4">
@@ -151,10 +82,7 @@
                 </div>
                 <div class="col-md-8">
                     <h2>Секция бокса</h2>
-                    <p>
-                        Наш клуб предлагает профессиональную секцию бокса для всех возрастов. Тренировки ведёт опытный наставник,
-                    кандидат в мастера спорта по боксу СССР Кравченко Андрей Александрович, подготовивший множество чемпионов.
-                    </p>
+                    <p>Наш клуб предлагает профессиональную секцию бокса для всех возрастов...</p>
                     <div class="d-flex">
                         <a href="gallery.html" class="btn btn-primary me-2">Галерея</a>
                         <a href="index.html#contact" class="btn btn-success">Записаться</a>
@@ -162,58 +90,19 @@
                 </div>
             </div>
         </section>
-
-        <section class="card shadow p-4 mb-4">
-            <h2>Военно-патриотическая подготовка</h2>
-            <p>
-                Программа включает тренировки по военной тактике, физподготовку и изучение истории российских вооружённых сил.
-            </p>
-        </section>
-
-        <section class="card shadow p-4 mb-4">
-            <h2>Тактические игры</h2>
-            <p>
-                Участники проходят курс тактических игр, стрельбы из пневматики и ориентирования на местности.
-            </p>
-        </section>
     </main>
 
-    <!-- Плавающее окно с контактами -->
     <div class="floating-contact-box">
         <div class="contact-header" onclick="toggleContactBox()">Контакты</div>
         <div class="contact-content">
-        <p><a href="tel:+79092502221">📞 Телефон</a></p>
-        <p><a href="info@спкпрайд.рф">📧 Почта</a></p>
-        <p><a href="https://t.me/ano_spk_prayd">Telegram</a></p>
-        <p><a href="https://vk.com/club229427609">VK</a></p>
+            <p><a href="tel:+79092502221">📞 Телефон</a></p>
+            <p><a href="mailto:info@спкпрайд.рф">📧 Почта</a></p>
+            <p><a href="https://t.me/ano_spk_prayd">Telegram</a></p>
+            <p><a href="https://vk.com/club229427609">VK</a></p>
         </div>
     </div>
-
 </div>
 
-<!-- Скрипт для сворачивания контактов -->
-<script>
-    function toggleContactBox() {
-        document.querySelector('.floating-contact-box').classList.toggle('minimized');
-    }
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    function toggleContactBox() {
-        document.querySelector('.floating-contact-box').classList.toggle('minimized');
-    }
-
-    // Автосворачивание при прокрутке
-    window.addEventListener('scroll', function() {
-        let contactBox = document.querySelector('.floating-contact-box');
-        if (window.scrollY > 100) {  // Сворачивается, если проскроллено больше 100px
-            contactBox.classList.add('minimized');
-        } else {
-            contactBox.classList.remove('minimized');
-        }
-    });
-</script>
 <script>
     window.addEventListener('scroll', function() {
         let header = document.querySelector('.wrapper.bg-sky');
@@ -225,8 +114,5 @@
     });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
-
-             
