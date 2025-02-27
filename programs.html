@@ -4,73 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Программы - АНО СПК ПРАЙД</title>
-    <link rel="stylesheet" href="style.css">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/plugins.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/colors/sky.css">
+    
+    <style>
+        /* Стили для плавающего окна */
+        .floating-contact-box {
+            position: fixed;
+            right: 20px;
+            bottom: 50px;
+            width: 250px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            z-index: 1000;
+            transition: all 0.3s ease-in-out;
+        }
+        .contact-header {
+            background: #222;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .contact-content {
+            display: block;
+        }
+        .floating-contact-box.minimized {
+            width: 150px;
+            padding: 5px;
+            height: auto;
+            opacity: 0.6;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .floating-contact-box.minimized .contact-content {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 
-<header class="wrapper bg-sky">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">АНО СПК ПРАЙД</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-                    <li class="nav-item"><a class="nav-link" href="programs.html">Программы</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#about">О нас</a></li>
-                    <li class="nav-item"><a class="nav-link" href="gallery.html">Галерея</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Контакты</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
+<div class="content-wrapper">
+    <header class="wrapper bg-sky">
+        <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
+            <div class="container flex-lg-row flex-nowrap align-items-center">
+                <!-- Логотип -->
+                <div class="navbar-brand w-100">
+                    <a href="index.html">
+                        <img class="logo-dark" style="max-width: 100px" src="цветспарашютом.jpg" alt="Логотип">
+                    </a>
+                </div>
 
-<main class="container mt-5">
-    <h1 class="text-center mb-4">Программы</h1>
-
-    <!-- Раздел "Секция бокса" -->
-    <section class="card shadow p-4 mb-4">
-        <div class="row align-items-center">
-            <div class="col-md-4">
-                <img src="coach.jpg" alt="Тренер по боксу" class="img-fluid rounded">
-            </div>
-            <div class="col-md-8">
-                <h2>Секция бокса</h2>
-                <p>
-                    Наш клуб предлагает профессиональную секцию бокса для всех возрастов. Тренировки ведёт опытный наставник,
-                    кандидат в мастера спорта по боксу СССР Кравченко Андрей Александрович, подготовивший множество чемпионов.
-                </p>
-                <div class="d-flex">
-                    <a href="gallery.html" class="btn btn-primary me-2">Галерея</a>
-                    <a href="contact.html" class="btn btn-success">Записаться</a>
+                <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+                    <div class="offcanvas-header d-lg-none">
+                        <a href="#"><img style="max-width: 120px" src="IMG-20250227-WA0108.jpg" alt=""/></a>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html#about">О нас</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html#news">Новости</a></li>
+                            <li class="nav-item"><a class="nav-link" href="programs.html">Программы</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html#contact">Контакты</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+        </nav>
+    </header>
+
+    <main class="container mt-5">
+        <h1 class="text-center mb-4">Программы</h1>
+
+        <!-- Раздел "Секция бокса" -->
+        <section class="card shadow p-4 mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <img src="coach.jpg" alt="Тренер бокса" class="img-fluid rounded">
+                </div>
+                <div class="col-md-8">
+                    <h2>Секция бокса</h2>
+                    <p>
+                        Наш клуб предлагает профессиональную секцию бокса для всех возрастов. Тренировки ведёт опытный наставник,
+                    кандидат в мастера спорта по боксу СССР Кравченко Андрей Александрович, подготовивший множество чемпионов.
+                    </p>
+                    <div class="d-flex">
+                        <a href="gallery.html" class="btn btn-primary me-2">Галерея</a>
+                        <a href="contact.html" class="btn btn-success">Записаться</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card shadow p-4 mb-4">
+            <h2>Военно-патриотическая подготовка</h2>
+            <p>
+                Программа включает тренировки по военной тактике, физподготовку и изучение истории российских вооружённых сил.
+            </p>
+        </section>
+
+        <section class="card shadow p-4 mb-4">
+            <h2>Тактические игры</h2>
+            <p>
+                Участники проходят курс тактических игр, стрельбы из пневматики и ориентирования на местности.
+            </p>
+        </section>
+    </main>
+
+    <!-- Плавающее окно с контактами -->
+    <div class="floating-contact-box">
+        <div class="contact-header" onclick="toggleContactBox()">Контакты</div>
+        <div class="contact-content">
+            <p><strong>Телефон:</strong> +7 (900) 123-45-67</p>
+            <p><strong>Email:</strong> info@prideclub.ru</p>
+            <p><strong>Адрес:</strong> г. Москва, ул. Примерная, 10</p>
         </div>
-    </section>
+    </div>
 
-    <!-- Добавим другие программы (пример) -->
-    <section class="card shadow p-4 mb-4">
-        <h2>Военно-патриотическая подготовка</h2>
-        <p>
-            Программа включает тренировки по военной тактике, физподготовку и изучение истории российских вооружённых сил.
-        </p>
-    </section>
+</div>
 
-    <section class="card shadow p-4 mb-4">
-        <h2>Тактические игры</h2>
-        <p>
-            Участники проходят курс тактических игр, стрельбы из пневматики и ориентирования на местности.
-        </p>
-    </section>
-</main>
+<!-- Скрипт для сворачивания контактов -->
+<script>
+    function toggleContactBox() {
+        document.querySelector('.floating-contact-box').classList.toggle('minimized');
+    }
+</script>
 
-<!-- Подключение Bootstrap (скрипты) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
 
+             
