@@ -11282,7 +11282,7 @@ fieldset:disabled .btn {
 }
 .bg-sky {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-sky-rgb), var(--bs-bg-opacity)) !important;
+  background-color: rgba(var(--bs-sky-rgb), var(--bs-bg-opacity))!important;
 }
 .bg-purple {
   --bs-bg-opacity: 1;
@@ -38888,4 +38888,75 @@ footer.bg-dark.angled.upper-start:before {
     margin: 0 auto;
     position: relative;
   }
+}  
+#gallery {
+    text-align: center;
+    padding: 20px;
 }
+
+#gallery .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#gallery img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#gallery img:hover {
+    transform: scale(1.05);
+}
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.news-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.news-item h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.news-item a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
+
+.news-item p {
+    font-size: 14px;
+    color: #555;
+}
+
+.news-item small {
+    font-size: 12px;
+    color: #888;
+}
+.navbar {
+    background-color: #5eb9f0 !important; /* Голубая шапка */
+}
+
+.navbar .nav-link {
+    color: white !important; /* Белый цвет ссылок */
+}
+
+.navbar .nav-link:hover {
+    color: #f0f0f0 !important; /* Светло-серый при наведении */
+}
+

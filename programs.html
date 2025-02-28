@@ -1,0 +1,422 @@
+<!doctype html>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="ПРОГРАММЫ">
+		<meta name="keywords" content="">
+		<meta name="author" content="">
+		<title></title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+		<link rel="shortcut icon" href="/favicon.ico">
+    		<link rel="stylesheet" href="assets/css/plugins.css">
+    		<link rel="stylesheet" href="assets/css/style.css">
+    		<link rel="stylesheet" href="assets/css/colors/sky.css">
+                
+<style>
+    /* Стили для плавающего окна */
+    .floating-contact-box {
+        position: fixed;
+        right: 20px;
+        bottom: 50px;
+        width: 250px;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        z-index: 1000;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Заголовок, который остаётся видимым при сворачивании */
+    .contact-header {
+        background: #222;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 10px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    /* Контент контактов - изначально отображается */
+    .contact-content {
+        display: block;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    /* Состояние свернутого окна */
+.floating-contact-box.minimized {
+    width: 150px;
+    padding: 5px;
+    height: auto;
+    opacity: 0.6; /* Уменьшаем непрозрачность */
+    background: rgba(0, 0, 0, 0.6); /* Делаем фон чуть прозрачнее */
+}
+
+.floating-contact-box.minimized .contact-header {
+    background: rgba(34, 34, 34, 0.7); /* Заголовок тоже делаем прозрачным */
+)
+    }
+
+    .floating-contact-box.minimized .contact-content {
+        display: none;
+    }
+
+    .floating-contact-box.minimized .contact-header {
+        background: #444;
+    }
+      
+</style>
+	</head>
+	<body data-site-id="">
+				<div class="content-wrapper">
+			<header class="wrapper bg-sky">
+				
+
+    <nav class="navbar navbar-expand-lg center-nav transparent navbar-dark">
+        <div class="container flex-lg-row flex-nowrap align-items-center">
+          <div class="navbar-brand w-100">
+            <a href="#">
+              <img class="logo-dark"
+                   style="max-width: 100px"
+                  data-param-id="4"
+                  data-param-type="image"
+
+                                      src="цветспарашютом.jpg"
+                                    alt="" />
+
+              <img class="logo-light"
+                   style="max-width: 100px"
+                   data-param-id="4"
+                   data-param-type="image"
+
+                                          src="цветспарашютом.jpg"
+                                      alt=""/>
+            </a>
+          </div>
+          <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+            <div class="offcanvas-header d-lg-none">
+              <a href="#"><img
+                        style="max-width: 120px"
+                        data-param-id="4"
+                        data-param-type="image"
+                                                  src="IMG-20250227-WA0108.jpg"
+                                                alt="" /></a>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html" data-param-id="71" data-param-type="text">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#about" data-param-id="73" data-param-type="text">О нас</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#news" data-param-id="74" data-param-type="text">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" data-param-id="72" data-param-type="text">Программы</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#gallery" data-param-id="71" data-param-type="text">Галлерея</a></li>  
+                <li class="nav-item"><a class="nav-link" href="#contact" data-param-id="75" data-param-type="text">Контакты</a></li>
+              </ul>
+            
+              <!-- /offcanvas-nav-other -->
+            </div>
+            <!-- /.offcanvas-body -->
+          </div>
+          <!-- /.navbar-collapse -->
+          <div class="navbar-other w-100 d-flex ms-auto">
+            <ul class="navbar-nav flex-row align-items-center ms-auto">
+              <li class="nav-item d-none d-md-block">
+                <a href="#contact" class="btn btn-sm btn-white rounded-pill" data-param-id="76" data-param-type="text">Связаться с нами</a>
+              </li>
+              <li class="nav-item d-lg-none">
+                <button class="hamburger offcanvas-nav-btn"><span></span></button>
+              </li>
+            </ul>
+            <!-- /.navbar-nav -->
+          </div>
+          <!-- /.navbar-other -->
+        </div>
+        <!-- /.container -->
+      </nav>
+      <!-- /.navbar -->
+
+			</header>
+
+			
+   
+   <main class="container mt-5">
+    <h1 class="text-center mb-4">ПРОГРАММЫ</h1>
+
+    <!-- Раздел "Секция бокса" -->
+    <section class="card shadow p-4 mb-4">
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <img src="coach.jpg" alt="Тренер по боксу" class="img-fluid rounded">
+            </div>
+            <div class="col-md-8">
+                <h2>Секция бокса</h2>
+                <p>
+                    Наш клуб предлагает профессиональную секцию бокса для всех возрастов. Тренировки ведёт опытный наставник,
+                    кандидат в мастера спорта СССР Кравченко Андрей Александрович, подготовивший множество чемпионов.
+                </p>
+                <div class="d-flex">
+                    <a href="index.html#gallery" class="btn btn-primary me-2">Галерея</a>
+                    <a href="#contact" class="btn btn-success">Записаться</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Добавим другие программы (пример) -->
+    <section class="card shadow p-4 mb-4">
+            <h2>Ориентирование и тактическая подготовка</h2>
+            <p>Обучение навыкам ориентирования на местности, тактическому мышлению, организации взаимодействия в экстремальных условиях.</p>
+        </section>
+        <section class="card shadow p-4 mb-4">
+            <h2>Первая медицинская помощь</h2>
+            <p>Обучение навыкам оказания первой помощи, реанимации, транспортировки раненых в сложных условиях.</p>
+        </section>
+        <section class="card shadow p-4 mb-4">
+            <h2>Выживание в полевых условиях</h2>
+            <p>Практические занятия по выживанию в лесу, пустыне, горах. Разведение огня, добыча воды, строительство укрытия.</p>
+        </section>
+        <section class="card shadow p-4 mb-4">
+            <h2>Тактические игры</h2>
+            <p>Участие в сценарных играх, моделирование боевых действий, обучение командной работе и тактике.</p>
+        </section>
+    </main>
+</div>
+
+		
+<!-- /section -->
+    <!--  <section class="wrapper bg-dark">
+        <div class="container pt-8 pt-md-16 pb-6 pb-md-11">
+          <figure class="rounded mt-md-n21 mt-lg-n23 mb-14" data-cue="slideInDown" data-delay="900"><img src="эмба_бкса.jpg" data-param-id="30" data-param-type="image"  alt="" /></figure>
+        </div>
+        <!-- /.container -->
+    <!--  </section> -->
+      <!-- /section -->
+<!-- Подключение Bootstrap (скрипты) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<section id="contact" class="wrapper bg-light">
+        <div class="container py-14 py-md-16">
+          <div class="row">
+            <div class="col-xl-10 mx-auto">
+              <div class="row gy-10 gx-lg-8 gx-xl-12">
+                <div class="col-lg-8">
+                  <form  id="contact-form" class="contact-form needs-validation" action="" novalidate>
+                    <div class="messages"></div>
+                    <div class="row gx-4">
+                      <!-- /column -->
+                      <div class="col-md-6">
+                        <div class="form-floating mb-4">
+                          <input id="form_email" type="email" name="email" class="form-control" placeholder="jane.doe@example.com" required>
+                          <label for="form_email">Email *</label>
+                          <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                          <div class="invalid-feedback">
+                            Please provide a valid email address.
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /column -->
+                      <!-- /column -->
+                      <!-- /column -->
+                      <div class="col-12">
+                        <div class="form-floating mb-4">
+                          <textarea id="form_message" name="message" class="form-control" placeholder="Your message" style="height: 150px" required></textarea>
+                          <label for="form_message">Message *</label>
+                          <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                          <div class="invalid-feedback">
+                            Please enter your messsage.
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /column -->
+                      <!-- /column -->
+                      <div class="col-12">
+                        <input type="submit" class="btn btn-primary rounded-pill btn-send mb-3" value="Отправить" data-param-id="110" data-param-type="text">
+                        <p class="text-muted"><strong>*</strong> These fields are required.</p>
+                      </div>
+                      <!-- /column -->
+                    </div>
+                    <!-- /.row -->
+                  </form>
+                  <!-- /form -->
+                </div>
+                <!--/column -->
+                <div class="col-lg-4">
+                                    <div class="d-flex flex-row">
+                    <div>
+                      <div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-location-pin-alt"></i> </div>
+                    </div>
+                    <div>
+                      <h5 class="mb-1" data-param-id="132">Адрес</h5>
+                      <p>
+    <a href="https://yandex.ru/maps/?text=Центральная ул., 3, село Совхоз Боровский" 
+       target="_blank">
+       Центральная ул., 3, село Совхоз Боровский
+    </a>
+</p>
+                    </div>
+                  </div>
+                                                      <div class="d-flex flex-row">
+                    <div>
+                      <div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-phone-volume"></i> </div>
+                    </div>
+                    <div>
+                      <h5 class="mb-1" data-param-id="133">Телефон</h5>
+                      <p><a href="tel:+79092502221" data-param-id="5" data-param-type="text">+79092502221</a></p>
+                    </div>
+                  </div>
+                                                      <div class="d-flex flex-row">
+                    <div>
+                      <div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-envelope"></i> </div>
+                    </div>
+                    <div>
+                      <h5 class="mb-1" data-param-id="134">E-mail</h5>
+                      <p class="mb-0"><a href="mailto:info@спкпрайд.рф" data-param-id=6 data-param-type="text" class="link-body">info@спкпрайд.рф</a></p>
+                    </div>
+                  </div>
+                                  </div>
+                <!--/column -->
+              </div>
+              <!--/.row -->
+            </div>
+            <!-- /column -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container -->
+      </section>
+      <!-- /section -->
+    
+
+ 
+
+		</div>
+
+		<footer class="bg-navy text-inverse">
+    <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
+
+        <!--/div -->
+        <hr class="mt-11 mb-12"/>
+        <div class="row gy-6 gy-lg-0">
+            <div class="col-md-4 col-lg-3">
+                <div class="widget">
+                    <img class="mb-4"
+                         style="max-width: 120px"
+                         data-param-id="4"
+                         data-param-type="image"
+                                                    src="цветспарашютом.jpg"
+                                                 alt=""/>
+                                                 <p class="mb-4">Made by Waronin .</p>
+                    <nav class="nav social social-white">
+                                                                                                                        
+                                                                                            </nav>
+                    <!-- /.social -->
+                </div>
+                <!-- /.widget -->
+            </div>
+            <!-- /column -->
+            <div class="col-md-4 col-lg-3">
+                <div class="widget">
+                    <h4 class="widget-title text-white mb-3" data-param-id="111" data-param-type="text">Связаться с нами</h4>
+<p>
+    <a href="https://yandex.ru/maps/?text=Центральная ул., 3, село Совхоз Боровский" 
+       target="_blank">
+       📍 Центральная ул., 3, село Совхоз Боровский
+    </a>
+</p>
+        <a href="mailto:info@спкпрайд.рф" data-param-id=6 data-param-type="text">📧 info@спкпрайд.рф</a>
+	<br/><a href="tel:+79092502221" data-param-id="5" data-param-type="text">📞 +79092502221</a>
+		</div>
+                <!-- /.widget -->
+            </div>
+            <!-- /column -->
+            <div class="col-md-4 col-lg-3">
+                <div class="widget">
+                    <h4 class="widget-title text-white mb-3">&nbsp;</h4>
+                    <ul class="list-unstyled  mb-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html" data-param-id="71" data-param-type="text">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#about" data-param-id="73" data-param-type="text">О нас</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#news" data-param-id="74" data-param-type="text">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" data-param-id="72" data-param-type="text">Программы</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#gallery" data-param-id="71" data-param-type="text">Галлерея</a></li>  
+                <li class="nav-item"><a class="nav-link" href="#contact" data-param-id="75" data-param-type="text">Контакты</a></li>
+                    </ul>
+                </div>
+                <!-- /.widget -->
+            </div>
+            <!-- /column -->
+                                                                                                                                                                                                                                                                                                                                                                        <!-- /column -->
+        </div>
+        <!--/.row -->
+    </div>
+    <!-- /.container -->
+</footer>					
+<div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+</div>
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/theme.js"></script>
+<script>
+    window.addEventListener('scroll', function() {
+        let box = document.querySelector('.floating-contact-box');
+        box.style.position = 'fixed';
+        box.style.right = '20px';
+        box.style.bottom = '50px';
+    });
+</script>
+<!-- Плавающее окно с контактами -->
+<div class="floating-contact-box">
+    <div class="contact-header" onclick="toggleContactBox()">
+         Контакты
+    </div>
+    <div class="contact-content">
+        <p><a href="tel:+79092502221">📞 Телефон</a></p>
+        <p><a href="info@спкпрайд.рф">📧 Почта</a></p>
+        <p><a href="https://t.me/ano_spk_prayd">Telegram</a></p>
+        <p><a href="https://vk.com/club229427609">VK</a></p>
+    </div>
+</div>		
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    let isMinimized = false;
+
+    function toggleContactBox() {
+        const box = document.querySelector(".floating-contact-box");
+        isMinimized = !isMinimized;
+        box.classList.toggle("minimized", isMinimized);
+    }
+
+    // Сворачивание окна при прокрутке вниз
+    window.addEventListener("scroll", function () {
+        const box = document.querySelector(".floating-contact-box");
+        if (window.scrollY > 100 && !isMinimized) {
+            box.classList.add("minimized");
+            isMinimized = true;
+        }
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+</body>
+</html>
