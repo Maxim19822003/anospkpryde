@@ -679,6 +679,16 @@
 
     document.addEventListener("DOMContentLoaded", loadNews);
 </script>
+<script>
+    window.addEventListener('scroll', function () {
+        let header = document.querySelector('.wrapper.bg-sky');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+</script>
 
 </body>
 </html>
