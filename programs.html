@@ -190,6 +190,67 @@
       <!-- /section -->
 <!-- Подключение Bootstrap (скрипты) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+</div>
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/theme.js"></script>
+<script>
+    window.addEventListener('scroll', function() {
+        let box = document.querySelector('.floating-contact-box');
+        box.style.position = 'fixed';
+        box.style.right = '20px';
+        box.style.bottom = '50px';
+    });
+</script>
+<!-- Плавающее окно с контактами -->
+<div class="floating-contact-box">
+    <div class="contact-header" onclick="toggleContactBox()">
+         Контакты
+    </div>
+    <div class="contact-content">
+        <p><a href="tel:+79092502221">📞 Телефон</a></p>
+        <p><a href="info@спкпрайд.рф">📧 Почта</a></p>
+        <p><a href="https://t.me/ano_spk_prayd">Telegram</a></p>
+        <p><a href="https://vk.com/club229427609">VK</a></p>
+    </div>
+</div>		
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    let isMinimized = false;
 
+    function toggleContactBox() {
+        const box = document.querySelector(".floating-contact-box");
+        isMinimized = !isMinimized;
+        box.classList.toggle("minimized", isMinimized);
+    }
+
+    // Сворачивание окна при прокрутке вниз
+    window.addEventListener("scroll", function () {
+        const box = document.querySelector(".floating-contact-box");
+        if (window.scrollY > 100 && !isMinimized) {
+            box.classList.add("minimized");
+            isMinimized = true;
+        }
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
 </body>
 </html>
