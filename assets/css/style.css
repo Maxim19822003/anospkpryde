@@ -38959,4 +38959,44 @@ footer.bg-dark.angled.upper-start:before {
 .navbar .nav-link:hover {
     color: #f0f0f0 !important; /* Светло-серый при наведении */
 }
+/* Стили для галереи */
+.gallery-container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.gallery-section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.gallery-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.gallery-item {
+  margin: 10px;
+  width: 300px;
+  height: auto;
+}
+
+.gallery-item img,
+.gallery-item video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+video {
+  border-radius: 8px;
+}
 
