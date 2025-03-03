@@ -39000,10 +39000,10 @@ video {
   border-radius: 8px;
 }
 
-#gallery .gallery-img {
+ #gallery .gallery-img {
   display: block;
   width: 100%;
   max-width: 100%;
-  height: 300px; /* Одинаковая высота для всех изображений */
-  object-fit: cover; /* Обрезка изображений для сохранения пропорций */
+  height:  300px !important;  /* Одинаковая высота для всех изображений */
+  object-fit: cover !important; /* Обрезка изображений для сохранения пропорций */
 }
