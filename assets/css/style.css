@@ -39000,4 +39000,27 @@ video {
   border-radius: 8px;
 }
 
- 
+ /* Исправленный стиль для эмблемы */
+.emblem-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.emblem-img {
+  display: block;
+  width: 100%;
+  max-width: 300px !important; /* Принудительно ограничиваем размер */
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .emblem-img {
+      max-width: 250px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .emblem-img {
+      max-width: 200px !important;
+  }
+}
