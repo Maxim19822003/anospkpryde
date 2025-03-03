@@ -299,6 +299,9 @@
   <section id="gallery" class="wrapper bg-light">
     <div class="container py-14 py-md-16 text-center">
         <h2 class="text-center mb-5">Фотогалерея</h2>
+        <div class="mt-4">
+          <a href="gallery.html" class="btn btn-primary">Перейти в галерею</a>
+      </div>
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="gallery4.jpg" alt="Галерея 1"></div>
@@ -311,11 +314,17 @@
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
         </div>
-        <div class="mt-5">
-            <a href="gallery.html" class="btn btn-primary">Перейти в галерею</a>
-        </div>
     </div>
 </section>
+
+<style>
+  .gallery-img {
+      width: 100%;
+      height: auto;
+      max-height: 300px; /* Ограничение высоты */
+      object-fit: contain; /* Гарантированно подгоняет изображение без обрезки */
+  }
+</style>
 
 <section id="news" class="wrapper bg-light">
     <div class="container py-14 py-md-16">
