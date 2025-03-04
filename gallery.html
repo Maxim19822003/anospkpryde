@@ -12,6 +12,53 @@
     		<link rel="stylesheet" href="assets/css/plugins.css">
     		<link rel="stylesheet" href="assets/css/style.css">
     		<link rel="stylesheet" href="assets/css/colors/sky.css">
+
+        <!-- Стили для галереи -->
+    <style>
+      /* Общие стили для галереи */
+      .gallery-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 20px;
+      }
+
+      .gallery-section {
+          margin-bottom: 40px;
+      }
+
+      h2 {
+          font-size: 2rem;
+          text-align: center;
+          margin-bottom: 20px;
+      }
+
+      /* Настройка сетки для элементов галереи */
+      .gallery-items {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Автоматически адаптируется под экран */
+          gap: 20px;
+          justify-items: center; /* Центрируем элементы */
+      }
+
+      .gallery-item img,
+      .gallery-item video {
+          width: 100%;
+          height: auto;
+          border-radius: 10px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для визуального выделения */
+      }
+
+      /* Адаптивные стили для мобильных устройств */
+      @media (max-width: 768px) {
+          h2 {
+              font-size: 1.5rem;
+          }
+          
+          .gallery-items {
+              grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Меньше колонок на мобильных устройствах */
+          }
+      }
+  </style>
                 
 <style>
     /* Стили для плавающего окна */
@@ -141,129 +188,112 @@
 
 			</header>
 
-			
-   
-   <main class="container mt-5">
-    <h1 class="text-center mb-4">ГАЛЕРЕЯ</h1>
-
-    <div class="gallery-container">
-        <!-- Раздел 1: Фотографии секции бокса -->
-        <div class="gallery-section">
-            <h2>Фотографии секции бокса</h2>
-            <div class="gallery-items">
-                <div class="gallery-item">
-                    <img src="gallery4.jpg" alt="Фото 1">
+      <main class="container mt-5">
+        <h1 class="text-center mb-4">ГАЛЕРЕЯ</h1>
+    
+        <div class="gallery-container">
+            <!-- Раздел 1: Фотографии секции бокса -->
+            <div class="gallery-section">
+                <h2>Фотографии секции бокса</h2>
+                <div class="gallery-items">
+                    <div class="gallery-item">
+                        <img src="gallery4.jpg" alt="Фото 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="gallery7.jpg" alt="Фото 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="gallery8.jpg" alt="Фото 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="gallery9.jpg" alt="Фото 4">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="gallery10.jpg" alt="Фото 5">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="gallery11.jpg" alt="Фото 6">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="gallery12.jpg" alt="Фото 7">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="gallery13.jpg" alt="Фото 8">
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="gallery7.jpg" alt="Фото 2">
+            </div>
+    
+            <!-- Раздел 2: Видео секции бокса -->
+            <div class="gallery-section">
+                <h2>Видео секции бокса</h2>
+                <div class="gallery-items">
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="video1.mp4" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                    </div>
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="video2.mp4" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                    </div>
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="video3.mp4" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="gallery8.jpg" alt="Фото 3">
+            </div>
+    
+            <!-- Раздел 3: Все фотографии -->
+            <div class="gallery-section">
+                <h2>Все фотографии</h2>
+                <div class="gallery-items">
+                    <div class="gallery-item">
+                        <img src="gallery4.jpg" alt="Фото 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="gallery7.jpg" alt="Фото 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="gallery8.jpg" alt="Фото 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="gallery9.jpg" alt="Фото 4">
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="gallery9.jpg" alt="Фото 4">
+            </div>
+    
+            <!-- Раздел 4: Все видео -->
+            <div class="gallery-section">
+                <h2>Все видео</h2>
+                <div class="gallery-items">
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="video1.mp4" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                    </div>
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="video2.mp4" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                    </div>
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="video3.mp4" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="gallery10.jpg" alt="Фото 5">
-                </div>
-                <div class="gallery-item">
-                    <img src="gallery11.jpg" alt="Фото 6">
-                </div>
-                <div class="gallery-item">
-                    <img src="gallery12.jpg" alt="Фото 7">
-                </div>
-                <div class="gallery-item">
-                    <img src="gallery13.jpg" alt="Фото 8">
-                </div>
-                <!-- Добавьте другие фотографии по необходимости -->
             </div>
         </div>
-
-        <!-- Раздел 2: Видео секции бокса -->
-        <div class="gallery-section">
-            <h2>Видео секции бокса</h2>
-            <div class="gallery-items">
-                <div class="gallery-item">
-                    <video controls>
-                        <source src="video1.mp4" type="video/mp4">
-                        Ваш браузер не поддерживает видео.
-                    </video>
-                </div>
-                <div class="gallery-item">
-                    <video controls>
-                        <source src="video2.mp4" type="video/mp4">
-                        Ваш браузер не поддерживает видео.
-                    </video>
-                </div>
-                <div class="gallery-item">
-                    <video controls>
-                        <source src="video3.mp4" type="video/mp4">
-                        Ваш браузер не поддерживает видео.
-                    </video>
-                </div>
-                <!-- Добавьте другие видео по необходимости -->
-            </div>
-        </div>
-
-        <!-- Раздел 3: Все фотографии -->
-        <div class="gallery-section">
-            <h2>Все фотографии</h2>
-            <div class="gallery-items">
-                <div class="gallery-item">
-                    <img src="gallery4.jpg" alt="Фото 1">
-                </div>
-                <div class="gallery-item">
-                    <img src="gallery7.jpg" alt="Фото 2">
-                </div>
-                <div class="gallery-item">
-                    <img src="gallery8.jpg" alt="Фото 3">
-                </div>
-                <div class="gallery-item">
-                    <img src="gallery9.jpg" alt="Фото 4">
-                </div>
-                <div class="gallery-item">
-                    <img src="gallery10.jpg" alt="Фото 5">
-                </div>
-                <div class="gallery-item">
-                    <img src="gallery11.jpg" alt="Фото 6">
-                </div>
-                <div class="gallery-item">
-                    <img src="gallery12.jpg" alt="Фото 7">
-                </div>
-                <div class="gallery-item">
-                    <img src="gallery13.jpg" alt="Фото 8">
-                </div>
-                <!-- Добавьте другие фотографии -->
-            </div>
-        </div>
-
-        <!-- Раздел 4: Все видео -->
-        <div class="gallery-section">
-            <h2>Все видео</h2>
-            <div class="gallery-items">
-                <div class="gallery-item">
-                    <video controls>
-                        <source src="video1.mp4" type="video/mp4">
-                        Ваш браузер не поддерживает видео.
-                    </video>
-                </div>
-                <div class="gallery-item">
-                    <video controls>
-                        <source src="video2.mp4" type="video/mp4">
-                        Ваш браузер не поддерживает видео.
-                    </video>
-                </div>
-                <div class="gallery-item">
-                    <video controls>
-                        <source src="video3.mp4" type="video/mp4">
-                        Ваш браузер не поддерживает видео.
-                    </video>
-                </div>
-                <!-- Добавьте другие видео -->
-            </div>
-        </div>
-    </div>
-
+    </main>
+    
 		
 <!-- /section -->
     <!--  <section class="wrapper bg-dark">
